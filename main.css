@@ -1,3 +1,12 @@
+
+:root {
+  --header-height: 100px;
+  --header-main-circle-radius: 70px;
+  --header-inner-circle-radius: 55px;
+  --pokedex-main-colour: rgb(214, 11, 39);
+  --border-outline: 3px;
+}
+
 body {
   background:  rgba(23, 13, 56, 0.884);
   display: flex;
@@ -9,9 +18,9 @@ body {
 .pokedex__container {
   width: 50vw;
   height: 80vh;
-  background-color: rgb(214, 11, 39);
+  background-color: var(--pokedex-main-colour);
   border-radius: 4px;
-  border: 1px solid rgb(0, 0, 0, 0.5);
+  border: var(--border-outline) solid black;
   display: flex;
 }
 
@@ -20,28 +29,52 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 50% 25% 25%;
-  height: 100px;
+  height: var(--header-height);
 }
 
-.pokedex__main_header {
-  background: white;
-  position: relative;
-  grid-column-start: span 4;
+.pokedex__header-top {
+  grid-column-start: span 3;
+  grid-row-start: 1;
+  border-bottom: var(--border-outline) solid black;
+  margin-bottom: calc(-1 * var(--border-outline));
+}
+.pokedex__header-filler {
+  grid-column-start: span 1;
   grid-row-start: 1;
 }
 
-.pokedex__header_light {
-  background: white;
+.pokedex__header_left {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 4;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: var(--border-outline) solid black;
 }
 
 .pokedex__header_curve {
-  width: 0; 
-  height: 0; 
-  border-bottom: 50px solid transparent;
-  border-left: 50px solid white;
+  grid-column-start: span 1;
+  grid-row-start: span 2;
+  background: linear-gradient(to bottom right, var(--pokedex-main-colour) 47%, black 47%, black 52%, var(--pokedex-main-colour) 52%);
+}
+
+.pokedex__header_main_circle {
+  height: var(--header-main-circle-radius);
+  width: var(--header-main-circle-radius);
+  background-color: silver;
+  border-radius: 50%;
+  border: var(--border-outline) solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokedex__header_inner_circle {
+  height: var(--header-inner-circle-radius);
+  width: var(--header-inner-circle-radius);
+  background: radial-gradient(farthest-corner at 25px 20px, white, #3277B6);
+  border-radius: 50%;
+  border: var(--border-outline) solid black;
 }
