@@ -1,0 +1,26 @@
+{
+  "name": "pokedex_css",
+  "version": "1.0.0",
+  "description": "CSS for a pokedex",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikefieldmay/Pokedex-CSS.git"
+  },
+  "keywords": [
+    "Pokemon",
+    "pokedex"
+  ],
+  "author": "Mike Field-May",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikefieldmay/Pokedex-CSS/issues"
+  },
+  "homepage": "https://github.com/mikefieldmay/Pokedex-CSS#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
