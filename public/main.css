@@ -115,9 +115,8 @@ body {
 }
 
 .pokedex__screen_container {
-  height: 45%;
-  width: 80%;
-  margin: 20px auto;
+  height: 55%;
+  margin: 20px;
   border: var(--border-outline) solid black;
   border-radius: 10px;
   background: rgb(222, 222, 222);
