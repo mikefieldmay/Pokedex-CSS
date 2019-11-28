@@ -251,6 +251,7 @@ body {
 
 .pokemon__name_text {
   text-transform: uppercase;
+  font-size: .8em;
 }
 
 .pokedex__touchpad_container {
